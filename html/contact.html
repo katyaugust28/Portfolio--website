@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Katy August- Portfolio</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel= "shortcut icon" href="file:///Users/katyaugust/Desktop/Portfolio/img/favicon%20(2).ico"> <!-- favicon: two yellow embedded squares-->
+		<link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+		<link rel="stylesheet" type="text/css" href="../css/styles.css">
+	</head>
+
+	<body>
+		<header class="page-header">
+			
+			<!-- add your logo here -->
+			<img src="../img/katy-logo.png" alt="logo" class="page-header__item">
+			<nav class="main-navigation page-header__item">
+		
+				<ul role="menubar" class="navigation-list"> <!-- menu bar -->
+					<li role="presentation">
+						<a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
+					</li>
+					<li role="presentation">
+						<a href="about.html" role="menuitem" class="navigation-list__item">About Katy</a>
+					</li>
+					<li role="presentation">
+						<a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
+					</li>
+					<li role="presentation">
+						<a href="contact.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Contact</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<section>
+			<h1>Contact</h1>
+		</section>
+
+		<section>
+			<form action="" method="post" class="contact-form" id="contact-form">
+				<label class="standard-label" for="fname">First Name</label>
+				<input type="text" id="fname" name="firstname" placeholder="Your name..." required>
+
+				<label class="standard-label" for="contact-email">Email:</label>
+				<input type="email" id="contact-email" placeholder="Your email..." required >
+
+				<label class="standard-label" for="contact-tel">Telephone: </label>
+				<input type="tel" id="contact-tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="Your phone number...">
+
+				<label class="standard-label" for="contact-message">Message: </label>
+				<textarea maxlength="240" id="contact-message" placeholder="Your message..." required></textarea>
+
+				<input class="standard-label" type="submit" value="Send message">
+			</form>
+		</section>
+
+
+
+
+		<div class="contact-info">
+			<p>
+			</p>
+			<p>
+			</p>
+			Katy August<br>
+			11034 Peaks Pike Road <br>
+			Sebastopol, CA 95472<br>
+			<br>
+			Telephone: <a href="tel:+17072918544" aria-label="telephone number: 7 0 7 2 9 1 8 5 4 4 ">(707)291-8544</a><br>
+			Skype: <a href="skype:kaugust@outlook.com">kaugust@outlook.com</a> <br>
+			E-mail: <a href="mailto:katyaugust28@gmail.com">katyaugust28@gmail.com</a>
+			<br>
+
+			<!-- wrapped button in the anchor tag-->
+			<a href="mailto:katyaugust28@gmail.com"><button class="button default" type="button">Contact Katy!</button> </a>
+		
+		</div>
+
+		<footer class="page-footer">
+			<p>You can find me on:</p>
+			<div class="social-media">
+				<img src="../img/github.svg" alt="Github Logo">
+
+				<img src="../img/linkedinicon.svg" alt="LinkedIn Logo">
+			</div>
+
+		</footer>
+
+		
+		<script src="../js/tota11y.min.js"></script>
+
+
+	</body>
+</html>

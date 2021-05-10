@@ -1,0 +1,364 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+* {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+:root { /*dark teal*/ /*white*/ /*black*/ /*dark grey*/ /*light yellow*/
+}
+
+.page-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 2em;
+}
+img.page-header__item {
+    max-width: 400px;
+}
+.page-header__item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+}
+.navigation-list{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+}
+.navigation-list li {
+    list-style: none;
+}
+
+body {
+
+	background-color: #004d57; /*dark teal*/
+	color: #fff;
+	font-family: Lato, sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+h1 {
+	font-size: 30px;
+	font-weight: 700;
+}
+
+h2 {
+	font-size: 24px;
+	font-weight: 700;
+}
+
+h3 {
+	font-size: 18px;
+	font-weight: 700;
+}
+
+a {
+	color: #FBFF1F ; 
+}
+
+a:visited {
+	/* once visited */ 
+	color: #fdff91;
+}
+
+a:hover, a:focus {
+	/* No underlining when hovering over a link */ 
+	text-decoration: none;
+}
+
+a:active {
+	/* when clicked */ 
+	color: #fdff91;
+}
+
+button {
+  /* overwrites browser defaults and resets the border */
+  border: 2px;
+  
+  /* takes the font from the outer container */
+  font-family: inherit;
+  /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+  background-color: #FBFF1F ;
+  color: #2b2b2b; /*text color on button*/
+  text-decoration: none;
+  /*adds spacing to the button (this will be discussed more in-depth later) */
+  padding: 10px;
+  border-radius: 3px;
+  /* gives the button a bottom border with a width of 3px, a type of solid, and a color in RGBA format */
+  border-bottom: 4px solid rgba(0, 0, 0, 1); 
+  /* the fourth number in the "solid rgba" brackets tells transparency (1 being opaque and 0 being completely translucent)*/
+  display: inline-block;
+  /*transition-duration: 0.2s; opacity transition to last 0.2 seconds
+  transition-property: opacity;*/
+  -webkit-transition: 0.2s opacity;
+  -o-transition: 0.2s opacity;
+  transition: 0.2s opacity; /*combining the above two steps*/
+}
+
+.button {
+  /* overwrites browser defaults and resets the border */
+  border: 2px;
+  
+  /* takes the font from the outer container */
+  font-family: inherit;
+  /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+  background-color: #FBFF1F ;
+  color: #2b2b2b; /*text color on button*/
+  text-decoration: none;
+  /*adds spacing to the button (this will be discussed more in-depth later) */
+  padding: 10px;
+  border-radius: 3px;
+  /* gives the button a bottom border with a width of 3px, a type of solid, and a color in RGBA format */
+  border-bottom: 4px solid rgba(0, 0, 0, 1); 
+  /* the fourth number in the "solid rgba" brackets tells transparency (1 being opaque and 0 being completely translucent)*/
+  display: inline-block;
+  /*transition-duration: 0.2s; opacity transition to last 0.2 seconds
+  transition-property: opacity;*/
+  -webkit-transition: 0.2s opacity;
+  -o-transition: 0.2s opacity;
+  transition: 0.2s opacity; /*combining the above two steps*/
+}
+
+.default {
+	border-color: #000;
+}
+
+button:hover, button:focus, .button:hover, .button:focus {
+	cursor:pointer;
+	opacity: 0.82;
+}
+
+.button_secondary {
+	background-color: #2b2b2b; /*dark grey*/
+	color: #FBFF1F ; 
+}
+
+.navigation-list__item--active {
+	text-decoration: none;
+}
+
+.profile_portrait {
+	float: left;
+	width: 250px;
+	height: auto;
+	margin-right: 40px;
+	border-radius: 50%; /*rounds portrait edges*/
+}
+
+.page-footer{
+	clear:both;
+	display:-webkit-box;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-box-orient:vertical;
+	-webkit-box-direction:normal;
+	    -ms-flex-direction:column;
+	        flex-direction:column;
+	text-align: center;
+}
+
+.profile {
+	max-width: 700px;
+	margin: 0 auto; /* note this only adjusts left and right margins until content is centered, not the verticle margins */
+	text-align: center;
+}
+
+/*Start grid fallback*/
+.grid__item {
+	display: inline-block;
+	width: 33%;
+}
+/*End grid fallback*/
+
+@supports (display: grid) {
+	.grid {
+		display: -ms-grid;
+		display: grid;
+		-ms-grid-columns: 1fr 15px 1fr 15px 1fr;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap: 15px;
+		margin: 0;
+	}
+
+	.grid__item {
+		background-color: #016f7d ; /*light teal*/
+		width: auto;
+		min-height: auto;
+		margin: 0;
+		padding: 15px;
+		text-align: center;
+	}
+
+	.grid__item:last-child {
+		-ms-grid-column: 3;
+		grid-column: 3 / 3;
+		-ms-grid-row: 1;
+		-ms-grid-row-span: 2;
+		grid-row: 1 / 3;
+	}
+}
+
+.standard-label { /*Puts my contact form in a line*/
+	width: 100%;
+	padding: 5px 10px;
+	margin: 5px 0;
+	display: inline-block;
+	/*border: 1px solid #00FABB; this would add an outline to the form around the labels*/
+	border-radius: 1px;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+
+
+.contact-form {
+	max-width: 200px;
+}
+
+.contact-info{
+	text-align: center
+}
+
+@media all and (max-width: 750px) {
+	.grid{
+		grid-gap: 10px;
+	}
+	.grid__item:last-child {
+		grid-column: auto/ auto;
+		grid-row: auto/ auto;
+	}
+	h1 {
+		font-size: 22px;
+	}	
+}
+@media all and (min-width: 500px) and (max-width: 750px) {
+	.grid{
+		-ms-grid-columns: 1fr 10px 1fr;
+		grid-template-columns: 1fr 1fr;
+	}
+}
+@media all and (max-width: 500px){
+	.grid{
+		-ms-grid-columns: 1fr;
+		grid-template-columns: 1fr;
+	}
+}
+
+
+@-webkit-keyframes color-change {
+  0% {
+    fill: #edc655;
+  }
+  50% {
+    fill: #fcffad;
+  }
+  100% {
+    fill: #f76414;
+  }
+}
+
+
+@keyframes color-change {
+  0% {
+    fill: #edc655;
+  }
+  50% {
+    fill: #fcffad;
+  }
+  100% {
+    fill: #f76414;
+  }
+}
+
+.sun {
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-name: color-change;
+          animation-name: color-change;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes cloud-move {
+  from {
+    -webkit-transform: translate(0, 50px);
+            transform: translate(0, 50px);
+  }
+  to {
+    -webkit-transform: translate(200px, 50px);
+            transform: translate(200px, 50px);
+  }
+}
+
+@keyframes cloud-move {
+  from {
+    -webkit-transform: translate(0, 50px);
+            transform: translate(0, 50px);
+  }
+  to {
+    -webkit-transform: translate(200px, 50px);
+            transform: translate(200px, 50px);
+  }
+}
+
+.cloud-front {
+  -webkit-animation-duration: 30s;
+          animation-duration: 30s;
+  -webkit-animation-name: cloud-move;
+          animation-name: cloud-move;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes cloud-move-reverse {
+  from {
+    -webkit-transform: translate(446px, 48px);
+            transform: translate(446px, 48px);
+  }
+  to {
+    -webkit-transform: translate(100px, 48px);
+            transform: translate(100px, 48px);
+  }
+}
+
+@keyframes cloud-move-reverse {
+  from {
+    -webkit-transform: translate(446px, 48px);
+            transform: translate(446px, 48px);
+  }
+  to {
+    -webkit-transform: translate(100px, 48px);
+            transform: translate(100px, 48px);
+  }
+}
+
+.cloud-back {
+  -webkit-animation: 34s cloud-move-reverse infinite alternate linear;
+          animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+.ul { /*removes the bullet points on the about me page*/
+	list-style-type: none;
+}

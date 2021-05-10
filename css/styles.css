@@ -1,0 +1,337 @@
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--primary-background-color: #004d57; /*dark teal*/
+	--secondary-background-color:#016f7d /*light teal*/;
+	--primary-text-color: #fff; /*white*/
+	--primary-accent-color: #FBFF1F /*yellow*/ ;
+	--secondary-accent-color: #000; /*black*/
+	--tertiary-accent-color: #2b2b2b; /*dark grey*/
+	--once-clicked-color: #fdff91; /*light yellow*/
+	--font-weight-primary: 700;
+}
+
+.page-header {
+    display: flex;
+    align-items: center;
+    margin: 2em;
+}
+img.page-header__item {
+    max-width: 400px;
+}
+.page-header__item {
+    flex: 1;
+}
+.navigation-list{
+    display: flex;
+    justify-content: space-around;
+}
+.navigation-list li {
+    list-style: none;
+}
+
+body {
+
+	background-color: var(--primary-background-color); /*dark teal*/
+	color: var(--primary-text-color);
+	font-family: Lato, sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+h1 {
+	font-size: 30px;
+	font-weight: var(--font-weight-primary);
+}
+
+h2 {
+	font-size: 24px;
+	font-weight: var(--font-weight-primary);
+}
+
+h3 {
+	font-size: 18px;
+	font-weight: var(--font-weight-primary);
+}
+
+a {
+	color: var(--primary-accent-color); 
+}
+
+a:visited {
+	/* once visited */ 
+	color: var(--once-clicked-color);
+}
+
+a:hover, a:focus {
+	/* No underlining when hovering over a link */ 
+	text-decoration: none;
+}
+
+a:active {
+	/* when clicked */ 
+	color: var(--once-clicked-color);
+}
+
+button,
+.button {
+  /* overwrites browser defaults and resets the border */
+  border: 2px;
+  
+  /* takes the font from the outer container */
+  font-family: inherit;
+  /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+  background-color: var(--primary-accent-color);
+  color: var(--tertiary-accent-color); /*text color on button*/
+  text-decoration: none;
+  /*adds spacing to the button (this will be discussed more in-depth later) */
+  padding: 10px;
+  border-radius: 3px;
+  /* gives the button a bottom border with a width of 3px, a type of solid, and a color in RGBA format */
+  border-bottom: 4px solid rgba(0, 0, 0, 1); 
+  /* the fourth number in the "solid rgba" brackets tells transparency (1 being opaque and 0 being completely translucent)*/
+  display: inline-block;
+  /*transition-duration: 0.2s; opacity transition to last 0.2 seconds
+  transition-property: opacity;*/
+  transition: 0.2s opacity; /*combining the above two steps*/
+}
+
+.default {
+	border-color: var(--secondary-accent-color);
+}
+
+button:hover, button:focus, .button:hover, .button:focus {
+	cursor:pointer;
+	opacity: 0.82;
+}
+
+.button_secondary {
+	background-color: var(--tertiary-accent-color); /*dark grey*/
+	color: var(--primary-accent-color); 
+}
+
+.navigation-list__item--active {
+	text-decoration: none;
+}
+
+.profile_portrait {
+	float: left;
+	width: 250px;
+	height: auto;
+	margin-right: 40px;
+	border-radius: 50%; /*rounds portrait edges*/
+}
+
+.page-footer{
+	clear:both;
+	display:flex;
+	flex-direction:column;
+	text-align: center;
+}
+
+.profile {
+	max-width: 700px;
+	margin: 0 auto; /* note this only adjusts left and right margins until content is centered, not the verticle margins */
+	text-align: center;
+}
+
+/*Start grid fallback*/
+.grid__item {
+	display: inline-block;
+	width: 33%;
+}
+/*End grid fallback*/
+
+@supports (display: grid) {
+	.grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap: 15px;
+		margin: 0;
+	}
+
+	.grid__item {
+		background-color: var(--secondary-background-color); /*light teal*/
+		width: auto;
+		min-height: auto;
+		margin: 0;
+		padding: 15px;
+		text-align: center;
+	}
+
+	.grid__item:last-child {
+		grid-column: 3 / 3;
+		grid-row: 1 / 3;
+	}
+}
+
+.standard-label { /*Puts my contact form in a line*/
+	width: 100%;
+	padding: 5px 10px;
+	margin: 5px 0;
+	display: inline-block;
+	/*border: 1px solid #00FABB; this would add an outline to the form around the labels*/
+	border-radius: 1px;
+	box-sizing: border-box;
+}
+
+
+
+.contact-form {
+	max-width: 200px;
+}
+
+.contact-info{
+	text-align: center
+}
+
+@media all and (max-width: 750px) {
+	.grid{
+		grid-gap: 10px;
+	}
+	.grid__item:last-child {
+		grid-column: auto/ auto;
+		grid-row: auto/ auto;
+	}
+	h1 {
+		font-size: 22px;
+	}	
+}
+@media all and (min-width: 500px) and (max-width: 750px) {
+	.grid{
+		grid-template-columns: 1fr 1fr;
+	}
+}
+@media all and (max-width: 500px){
+	.grid{
+		grid-template-columns: 1fr;
+	}
+}
+
+
+@keyframes color-change {
+  0% {
+    fill: #edc655;
+  }
+  50% {
+    fill: #fcffad;
+  }
+  100% {
+    fill: #f76414;
+  }
+}
+
+.sun {
+  animation-duration: 4s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 50px);
+  }
+  to {
+    transform: translate(200px, 50px);
+  }
+}
+
+.cloud-front {
+  animation-duration: 30s;
+  animation-name: cloud-move;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(446px, 48px);
+  }
+  to {
+    transform: translate(100px, 48px);
+  }
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
+.ul { /*removes the bullet points on the about me page*/
+	list-style-type: none;
+}
+
+
+
+
+
+
+/* None of the below code works with the personal svg file I tried to make work. 
+Did I not identify the class on the correct line? 
+See below for further notes
+
+@keyframes sun-move {
+	from{
+		transform: scale:(0.5,0.5);
+	}
+	to{
+		transform: scale:(2,2);
+	}
+}
+
+
+.sun {
+	animation-duration: 10s;
+	animation-name: sun-move;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: linear;
+} /* short hand would be animation: 30s cloud-move infinite linear*/
+
+
+/*
+.sun { /* class="sun" at code line 257 on goldenmountains.svg file
+	animation-name: bounce;
+	animation-timing-function: ease;
+	animation-duration: 2s;
+
+}
+
+@keyframes bounce { 
+	0%   { transform: translateY(0); }
+	50%  { transform: translateY(-100px); }
+	100% { transform: translateY(0);
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*style the send message button*/
+
+
+/*
+dark teal: #003138;
+body {background-color: #cc5500 ;}*/

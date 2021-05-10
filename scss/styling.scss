@@ -1,0 +1,14 @@
+$primary-color: #FBFF1F;
+
+a {
+	color: $primary-color; 
+}
+
+$primary-color-lighter:lighten($primary-color, 20%)
+
+
+
+a:visited {
+	/* once visited */ 
+	color: $primary-color-lighter;
+}
