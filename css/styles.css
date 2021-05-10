@@ -58,21 +58,21 @@ h3 {
 }
 
 a {
-	color: var(--primary-accent-color); 
+	color: var(--primary-accent-color);
 }
 
 a:visited {
-	/* once visited */ 
+	/* once visited */
 	color: var(--once-clicked-color);
 }
 
 a:hover, a:focus {
-	/* No underlining when hovering over a link */ 
+	/* No underlining when hovering over a link */
 	text-decoration: none;
 }
 
 a:active {
-	/* when clicked */ 
+	/* when clicked */
 	color: var(--once-clicked-color);
 }
 
@@ -80,7 +80,7 @@ button,
 .button {
   /* overwrites browser defaults and resets the border */
   border: 2px;
-  
+
   /* takes the font from the outer container */
   font-family: inherit;
   /* styles the background color, font color, and text decoration (underline, etc.) of the button */
@@ -91,7 +91,7 @@ button,
   padding: 10px;
   border-radius: 3px;
   /* gives the button a bottom border with a width of 3px, a type of solid, and a color in RGBA format */
-  border-bottom: 4px solid rgba(0, 0, 0, 1); 
+  border-bottom: 4px solid rgba(0, 0, 0, 1);
   /* the fourth number in the "solid rgba" brackets tells transparency (1 being opaque and 0 being completely translucent)*/
   display: inline-block;
   /*transition-duration: 0.2s; opacity transition to last 0.2 seconds
@@ -110,7 +110,7 @@ button:hover, button:focus, .button:hover, .button:focus {
 
 .button_secondary {
 	background-color: var(--tertiary-accent-color); /*dark grey*/
-	color: var(--primary-accent-color); 
+	color: var(--primary-accent-color);
 }
 
 .navigation-list__item--active {
@@ -198,7 +198,7 @@ button:hover, button:focus, .button:hover, .button:focus {
 	}
 	h1 {
 		font-size: 22px;
-	}	
+	}
 }
 @media all and (min-width: 500px) and (max-width: 750px) {
 	.grid{
@@ -271,8 +271,8 @@ button:hover, button:focus, .button:hover, .button:focus {
 
 
 
-/* None of the below code works with the personal svg file I tried to make work. 
-Did I not identify the class on the correct line? 
+/* None of the below code works with the personal svg file I tried to make work.
+Did I not identify the class on the correct line?
 See below for further notes
 
 @keyframes sun-move {
@@ -302,7 +302,7 @@ See below for further notes
 
 }
 
-@keyframes bounce { 
+@keyframes bounce {
 	0%   { transform: translateY(0); }
 	50%  { transform: translateY(-100px); }
 	100% { transform: translateY(0);
