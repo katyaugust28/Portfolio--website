@@ -27,9 +27,15 @@ img.page-header__item {
 .navigation-list{
     display: flex;
     justify-content: space-around;
+
 }
 .navigation-list li {
     list-style: none;
+}
+
+.navigation-list__item--active {
+	text-decoration: none;
+	text-align: right;
 }
 
 body {
@@ -113,9 +119,7 @@ button:hover, button:focus, .button:hover, .button:focus {
 	color: var(--primary-accent-color);
 }
 
-.navigation-list__item--active {
-	text-decoration: none;
-}
+
 
 .profile_portrait {
 	float: left;
