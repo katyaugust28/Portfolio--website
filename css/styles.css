@@ -83,7 +83,7 @@ a:active {
 }
 
 button,
-.button {
+.button, .button_tertiary {
   /* overwrites browser defaults and resets the border */
   border: 2px;
 
