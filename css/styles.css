@@ -184,6 +184,10 @@ button:hover, button:focus, .button:hover, .button:focus {
 	text-align: center;
 }
 
+.ul { /*removes the bullet points on the about me page*/
+	list-style-type: none;
+}
+
 /*Start grid fallback*/
 .grid__item {
 	display: inline-block;
@@ -224,7 +228,17 @@ button:hover, button:focus, .button:hover, .button:focus {
 	box-sizing: border-box;
 }
 
+.contact-heading { /*ask how to make this indent from the right a bit*/
+	text-align: left;
+}
 
+.profile_portrait2 { /* on contact page */
+	float: left;
+	width: 250px;
+	height: auto;
+	margin-right: 40px;
+	border-radius: 50%; /*rounds portrait edges*/
+}
 
 .contact-form {
 	max-width: 450px;
@@ -245,14 +259,21 @@ button:hover, button:focus, .button:hover, .button:focus {
 	h1 {
 		font-size: 22px;
 	}
-	.navigation-list{
-		display: flex;
+
+	img.page-header__item {
+		margin-top 50px;
+		width: 300px;
+		height: 50px;
+	}
+	.profile_portrait {
 		float: right;
 	}
-	img.page-header__item {
-			max-width: 200px;
+	.navigation-list li {
+		display:block;
 	}
+
 }
+
 @media all and (min-width: 500px) and (max-width: 750px) {
 	.grid{
 		grid-template-columns: 1fr 1fr;
@@ -314,23 +335,6 @@ button:hover, button:focus, .button:hover, .button:focus {
 .cloud-back {
   animation: 34s cloud-move-reverse infinite alternate linear;
 }
-
-.ul { /*removes the bullet points on the about me page*/
-	list-style-type: none;
-}
-
-.contact-heading { /*ask how to make this indent from the right a bit*/
-	text-align: left;
-}
-
-.profile_portrait2 { /* on contact page */
-	float: left;
-	width: 250px;
-	height: auto;
-	margin-right: 40px;
-	border-radius: 50%; /*rounds portrait edges*/
-}
-
 
 
 
