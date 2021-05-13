@@ -240,6 +240,7 @@ button:hover, button:focus, .button:hover, .button:focus {
 		font-size: 22px;
 	}
 	.navigation-list{
+		display: flex;
 		float: right;
 	}
 	img.page-header__item {
