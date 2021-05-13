@@ -16,22 +16,28 @@
 
 .page-header {
     display: flex;
-    align-items: center;
-    margin: 2em;
+    width: 100%;
+    padding: 20px;
 }
 img.page-header__item {
     max-width: 400px;
 }
 .page-header__item {
-    flex: 1;
+    flex: 0 1 200px;
 }
+
+.page-header__item:last-child {
+	flex-grow: 1;
+	text-align: right;
+}
+
 .navigation-list{
-    display: flex;
-    justify-content: space-around;
+	list-style-type: none;
 
 }
 .navigation-list li {
-    list-style: none;
+    display: inline-block;
+		margin-left: 15px
 }
 
 .navigation-list__item--active {
