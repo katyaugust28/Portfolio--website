@@ -37,7 +37,7 @@ img.page-header__item {
 }
 .navigation-list li {
     display: inline-block;
-		margin-left: 15px
+		margin-left: 15px;
 }
 
 .navigation-list__item--active {
@@ -325,7 +325,7 @@ button:hover, button:focus, .button:hover, .button:focus {
 
 .profile_portrait2 { /* on contact page */
 	float: left;
-	width: 400px;
+	width: 250px;
 	height: auto;
 	margin-right: 40px;
 	border-radius: 50%; /*rounds portrait edges*/
