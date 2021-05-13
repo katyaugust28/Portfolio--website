@@ -238,6 +238,12 @@ button:hover, button:focus, .button:hover, .button:focus {
 	h1 {
 		font-size: 22px;
 	}
+	.navigation-list{
+		float: right;
+	}
+	img.page-header__item {
+			max-width: 200px;
+	}
 }
 @media all and (min-width: 500px) and (max-width: 750px) {
 	.grid{
